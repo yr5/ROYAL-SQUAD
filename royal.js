@@ -2,6 +2,12 @@ const Discord = require("discord.js");
 const ytdl = require('ytdl-core');
 const client = new Discord.Client();
 
+client.on('ready', () => {
+              console.log(`Logged in as ${client.user.tag}!`);
+    console.log(`in ${client.guilds.size} servers `)
+    console.log(`[Users] ${client.users.size}`)
+    client.user.setStatus("invisible")
+});
 
 client.on("guildMemberAdd", member => {
 const voiceChannel = member.voiceChannel;
