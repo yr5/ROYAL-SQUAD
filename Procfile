@@ -1,1 +1,1 @@
-worker: node royal.js
+worker node royal.js
